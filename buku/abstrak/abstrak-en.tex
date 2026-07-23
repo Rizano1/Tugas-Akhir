@@ -1,0 +1,28 @@
+\begin{center}
+  \large\textbf{ABSTRACT}
+\end{center}
+
+\addcontentsline{toc}{chapter}{ABSTRACT}
+
+\vspace{2ex}
+
+\begingroup
+% Menghilangkan padding
+\setlength{\tabcolsep}{0pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{l >{\centering}m{3em} X}
+  \emph{Name}     & : & \name{}         \\
+
+  \emph{Title}    & : & \engtatitle{}   \\
+
+  \emph{Advisors} & : & 1. \advisor{}   \\
+                  &   & 2. \coadvisor{} \\
+\end{tabularx}
+\endgroup
+
+\emph{This research aims to integrate a Multimodal Large Language Model (MLLM) agent with the Jueying Lite3 robot to automate navigation and visual analysis, while designing a Human-in-the-Loop (HITL) architecture to ensure system adaptability mid-inspection mission. The system development utilizes the Model Context Protocol (MCP) standard and webhooks to connect natural language instructions with ROS Noetic navigation on the robot. Instructions are broken down into sequential sub-tasks requiring operator validation at each coordinate. At every inspection point, the robot captures an image of the object and compares it against Standard Operating Procedure (SOP) documents to assess condition compliance. Evaluation was conducted through isolated component testing (tool calling, image analysis, plan generation), end-to-end system testing, and operator workload measurement using the NASA-TLX questionnaire. In isolated testing, Gemini 3.1 Pro achieved a tool calling success rate of 98.61\% (71/72), visual analysis accuracy of 100\% (27/27), and plan route efficiency of 100\% (12/12). In end-to-end testing across 9 tiered mission scenarios (easy, medium, hard), Gemini 3.1 Pro recorded a visual analysis accuracy of 93.33\% (28/30 inspection points) and a route efficiency of 100\% (9/9 scenarios). The system also successfully accommodated all 4 tested operator intervention scenarios (initial plan alteration, mid-mission object addition, object cancellation and replacement, and manual secondary movement), while reducing the total NASA-TLX workload score from 54.13 (under teleoperation) to 18.40. The MLLM architecture coupled with the HITL mechanism is capable of adaptively handling varying inspection scenarios in terms of route differences and target object variations without code modifications, ensuring system adaptability mid-mission, and significantly alleviating operator cognitive load in autonomous inspections.}
+
+
+% Ubah kata-kata berikut dengan kata kunci dari tugas akhir dalam Bahasa Inggris
+\emph{Keywords}: \emph{Quadruped Robot, Model Context Protocol (MCP), Human-in-the-Loop, RAG, MLLM, ROS}

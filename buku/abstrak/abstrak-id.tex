@@ -1,0 +1,28 @@
+\begin{center}
+  \large\textbf{ABSTRAK}
+\end{center}
+
+\addcontentsline{toc}{chapter}{ABSTRAK}
+
+\vspace{2ex}
+
+\begingroup
+% Menghilangkan padding
+\setlength{\tabcolsep}{0pt}
+
+\noindent
+\begin{tabularx}{\textwidth}{l >{\centering}m{2em} X}
+  Nama Mahasiswa    & : & \name{}         \\
+
+  Judul Tugas Akhir & : & \tatitle{}      \\
+
+  Pembimbing        & : & 1. \advisor{}   \\
+                    &   & 2. \coadvisor{} \\
+\end{tabularx} 
+\endgroup
+
+Penelitian ini bertujuan mengintegrasikan agen \textit{Multimodal Large Language Model} (MLLM) dengan robot Jueying Lite3 untuk mengotomatisasi navigasi dan analisis visual, sekaligus merancang arsitektur \textit{Human-in-the-Loop} (HITL) untuk menjamin adaptabilitas sistem di tengah misi inspeksi. Pengembangan sistem menggunakan standar \textit{Model Context Protocol} (MCP) dan \textit{webhook} untuk menghubungkan instruksi bahasa alami dengan navigasi ROS Noetic pada robot. Instruksi dipecah menjadi sub-tugas sekuensial yang memerlukan validasi operator di tiap titik koordinat. Pada setiap titik inspeksi, robot menangkap citra objek dan membandingkannya dengan dokumen \textit{Standard Operating Procedure} (SOP) untuk menilai kesesuaian kondisi. Evaluasi dilakukan melalui pengujian komponen secara terisolasi (pemanggilan \textit{tools}, analisis \textit{image}, pembuatan \textit{plan}), pengujian keseluruhan sistem secara \textit{end-to-end}, dan pengukuran beban kerja operator menggunakan kuesioner NASA-TLX. Pada pengujian terisolasi, Gemini 3.1 Pro mencatatkan keberhasilan pemanggilan \textit{tools} 98,61\% (71/72), akurasi analisis visual 100\% (27/27), dan efisiensi rute \textit{plan} 100\% (12/12). Pada pengujian \textit{end-to-end} terhadap 9 skenario misi bertingkat (mudah, sedang, sulit), Gemini 3.1 Pro mencatatkan akurasi analisis visual 93,33\% (28/30 titik inspeksi) dan efisiensi rute 100\% (9/9 skenario). Sistem juga berhasil mengakomodasi seluruh 4 skenario intervensi operator yang diujikan (perubahan rencana awal, penambahan objek di tengah misi, pembatalan dan penggantian objek, serta gerakan tambahan manual), serta menurunkan total skor beban kerja NASA-TLX dari 54,13 (pada teleoperasi) menjadi 18,40. Arsitektur MLLM dengan mekanisme HITL mampu menangani skenario inspeksi yang berbeda, baik dari segi perbedaan rute maupun variasi objek target, secara adaptif tanpa perubahan kode, mampu membuat sistem beradaptasi di tengah berjalannya misi dan berhasil meringankan beban kognitif operator secara signifikan dalam inspeksi otonom.
+
+% Ubah kata-kata berikut dengan kata kunci dari tugas akhir
+Kata Kunci: \emph{Robot Quadruped, Model Context Protocol (MCP), Human-in-the-Loop, RAG, MLLM, ROS}
+

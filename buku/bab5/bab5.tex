@@ -1,0 +1,25 @@
+\chapter{PENUTUP}
+\label{sec:chap5_tutup}
+\vspace{1ex}
+
+\section{Kesimpulan}
+Berdasarkan hasil perancangan, implementasi, dan pengujian sistem inspeksi otonom berbasis \textit{Agentic} AI terintegrasi \textit{Multimodal Large Language Model} yang telah dilakukan, dapat ditarik kesimpulan yang menjawab tujuan penelitian sebagai berikut:
+
+\begin{enumerate}
+    \item Integrasi MLLM telah berhasil menangani skenario inspeksi yang berbeda, baik dari segi perbedaan rute maupun variasi objek target, secara adaptif tanpa perubahan kode. Melalui MCP, instruksi bahasa alami dari pengguna berhasil diterjemahkan secara otomatis menjadi pemanggilan \textit{tools} pergerakan fisik robot serta analisis visual berbasis dokumen SOP. Pada pengujian \textit{end-to-end} terhadap 9 skenario misi bertingkat yang mencakup 30 titik inspeksi, Gemini 3.1 Pro Preview mencatatkan kinerja terbaik dengan akurasi analisis visual sebesar 93,33\% (28/30), efisiensi rute \textit{plan} 100\% (9/9), dan rata-rata latensi waktu sesi 6.1 menit. Gemini 2.5 Flash menyusul di posisi kedua dengan akurasi analisis visual 86,67\% (26/30), efisiensi rute 77,78\% (7/9), dan rata-rata latensi waktu sesi 6.4 menit. Sementara itu, model lokal Qwen 3.5 27B mencatatkan akurasi visual 63,33\% (19/30) dan efisiensi rute 66,67\% (6/9) dengan rata-rata latensi waktu sesi paling tinggi mencapai 10.2 menit (bahkan mencapai 17 hingga 26 menit pada level sulit), sehingga model lokal kurang efektif dibanding model \textit{cloud}. Keberhasilan integrasi MLLM, terutama pada model Gemini 3.1 Pro Preview, terbukti memangkas total beban kerja operator (NASA-TLX) secara signifikan dari 54,13 (pada kendali manual) menjadi 18,40.
+    
+    \item Arsitektur \textit{Human-in-the-Loop} dengan mekanisme eksekusi bertahap sukses diimplementasikan dan mampu membuat sistem beradaptasi di tengah berjalannya misi. Sistem umpan balik otomatis memungkinkan robot untuk menginformasikan bahwa robot telah mencapai setiap titik koordinat dan meminta validasi lanjutan. Pengujian terhadap 4 skenario intervensi yang berbeda (perubahan rencana awal, penambahan objek di tengah misi, pembatalan dan penggantian objek, serta gerakan tambahan manual) menunjukkan bahwa seluruh model MLLM yang diuji mencapai keberhasilan dalam mengakomodasi setiap jenis intervensi tersebut pada cakupan skenario yang dirancang. Meskipun demikian, variasi intervensi yang diuji masih terbatas pada empat pola dasar, sehingga keberhasilan ini belum dapat digeneralisasi untuk seluruh kemungkinan intervensi di lingkungan operasional yang lebih kompleks.
+\end{enumerate}
+
+\section{Saran}
+Penelitian ini telah meletakkan fondasi arsitektur agen inspeksi otonom yang interaktif, namun masih terdapat ruang untuk pengembangan lebih lanjut. Beberapa saran yang dapat dipertimbangkan untuk penelitian di masa mendatang meliputi:
+
+\begin{enumerate}
+    \item Penggunaan teknik \textit{context pruning} (pemangkasan riwayat) dan peringkasan memori untuk menjaga stabilitas kecepatan inferensi MLLM lokal tanpa mengorbankan akurasi historis.
+    
+    \item Eksplorasi model lokal lain, terutama VLN (\textit{Vision-Language Navigation}) seperti Qwen-RobotNav, yang dirancang khusus untuk penalaran spasial dan navigasi otonom.
+    
+    \item Melakukan migrasi dari ROS Noetic ke ROS 2 Humble untuk memanfaatkan \textit{Navigation Stack} yang lebih canggih.
+    
+    \item Memperluas cakupan pengujian dengan menambah jumlah iterasi, variasi jenis objek inspeksi, kompleksitas lingkungan operasional, serta pola intervensi operator yang lebih beragam untuk menguji batas kemampuan sistem secara lebih komprehensif.
+\end{enumerate}

@@ -1,0 +1,63 @@
+
+\begin{spacing}{1.2}
+  \chapter{PENDAHULUAN}
+\end{spacing}
+
+
+\pagenumbering{arabic}
+\vspace{4ex}
+
+\section{Latar Belakang}
+Perkembangan teknologi robotika dalam dekade terakhir telah mengubah paradigma inspeksi infrastruktur secara signifikan. Pasar (\textit{Autonomous Mobile Robots}) diproyeksikan tumbuh pesat dengan estimasi nilai pasar mencapai USD 9,56 miliar pada tahun 2030, didorong oleh kebutuhan mendesak akan otomatisasi di sektor-sektor berisiko tinggi \cite{GrandView2024}. Secara spesifik, robot berkaki empat (\textit{quadruped}) menunjukkan keunggulan mobilitas yang superior dibandingkan robot beroda, terutama dalam menavigasi medan tidak terstruktur \cite{fan2024review}. Kemampuan adaptasi ini menjadikan platform \textit{quadruped} sebagai solusi ideal untuk tugas pemantauan di fasilitas industri yang kompleks, guna meminimalisir risiko keselamatan bagi pekerja manusia \cite{LookingGlass2024}. Meskipun memiliki mobilitas yang mumpuni, pengoperasian robot \textit{quadruped} di lapangan masih menghadapi tantangan besar terkait interaksi manusia-robot. Metode pengendalian yang paling umum digunakan saat ini adalah teleoperasi manual, yang terbukti menciptakan beban kognitif yang tinggi bagi operator. Studi oleh Rea \cite{rea2022still} menyoroti bahwa antarmuka teleoperasi menuntut atensi penuh operator untuk menerjemahkan data telemetri mentah dan visual kamera secara terus-menerus, yang sering kali memperlambat pengambilan keputusan dan memicu kelelahan mental. 
+
+Penelitian sebelumnya oleh Darmawan \cite{Darmawan2025} telah berhasil mengembangkan sistem navigasi otonom yang terintegrasi dengan deteksi objek berbasis YOLOv8 dan kamera termal sebagai upaya untuk memitigasi beban kognitif tersebut. Namun, sistem tersebut masih membutuhkan campur tangan operator secara manual melalui \textit{web joystick} apabila robot terjebak atau mengalami kendala rute. Intervensi semacam ini tidak hanya mengalihkan fokus operator dari tugas utama inspeksi, tetapi juga menurunkan tingkat efisiensi otonomi yang diharapkan dari sistem robotika modern. Selain itu, model deteksi objek konvensional seperti YOLOv8 terbukti memiliki keterbatasan adaptabilitas operasional karena hanya mampu mendeteksi kelas objek yang telah dikonfigurasi dan dilatih secara spesifik pada tahap awal \textit{(pre-trained)}. Hal ini menyebabkan sistem kehilangan fleksibilitas untuk mengenali objek atau jenis anomali baru di lapangan yang belum terdefinisi di dalam \textit{dataset} pelatihannya. Integrasi \textit{Large Language Model} (LLM) mulai diteliti sebagaimana diusulkan dalam rancangan awal Mahendra \cite{Mahendra2024} untuk mengatasi kendala keterikatan pada parameter klasifikasi yang statis tersebut. Penerapan LLM tersebut masih bersifat searah, di mana model menghasilkan rencana aksi menyeluruh dan mengeksekusinya sekaligus. Ketiadaan validasi bertahap membatasi fleksibilitas operasional sistem dalam menghadapi dinamika lingkungan yang tidak terduga. Operator kehilangan peluang untuk mengintervensi atau memodifikasi rencana di tengah jalan tanpa mekanisme verifikasi di setiap langkah, baik untuk menyesuaikan strategi dengan kondisi lapangan yang berubah maupun untuk memastikan hasil setiap tahapan telah sesuai dengan standar yang diinginkan.
+
+Penelitian ini mengusulkan integrasi \textit{Multimodal Large Language Model} (MLLM) sebagai orkestrator cerdas dengan mekanisme eksekusi bertahap untuk mengatasi permasalahan tersebut. MLLM digunakan bukan sekadar sebagai pemroses bahasa, melainkan sebagai \textit{Agentic} AI yang mampu menerima instruksi tingkat tinggi dalam bahasa alami, memecahnya menjadi rencana inspeksi, dan mengeksekusinya menggunakan pendekatan \textit{tool-calling}. Dengan kapabilitas \textit{zero-shot vision-language}, MLLM dapat melakukan evaluasi \textit{real-time} terhadap kondisi objek inspeksi di lapangan berdasarkan deskripsi \textit{Standard Operating Procedure} (SOP), membebaskan sistem dari batasan \textit{classes} pada model konvensional. Pendekatan mekanisme bertahap yang diusulkan memastikan bahwa setiap aksi robot yang telah dilakukan akan dilaporkan kepada operator melalui antarmuka komunikasi. Mekanisme ini memfasilitasi intervensi dinamis melalui konsep \textit{Human-in-the-Loop} (HITL). Sebagai contoh dari kapabilitas HITL ini dalam skenario operasi, operator dapat memberikan instruksi pembatalan target, menambahkan target baru, atau memerintahkan manuver jarak dekat secara langsung apabila hasil tangkapan visual dari robot dirasa kurang memadai. Melalui arsitektur ini, penelitian bertujuan untuk menciptakan sistem inspeksi otonom yang tidak hanya fleksibel dalam memahami perintah manusia, tetapi juga aman karena mengintegrasikan intervensi operator manusia secara langsung ke dalam siklus pengambilan keputusan AI.
+
+\section{Rumusan Masalah}
+Berdasarkan latar belakang yang telah dipaparkan, permasalahan utama yang mendasari penelitian ini adalah:
+
+\begin{enumerate}
+    \item Metode inspeksi robot dengan teleoperasi manual memberikan beban kognitif yang signifikan bagi operator, sehingga membuat teleoperasi menjadi sulit \cite{rea2022still}. Sementara itu, sistem otonom yang ada belum bisa menangani skenario inspeksi yang berbeda seperti perbedaan rute dan variasi objek target tanpa melakukan pemrograman ulang pada kode.
+    
+    \item Pendekatan integrasi \textit{Large Language Model} (LLM) pada robot saat ini menerapkan eksekusi rencana secara satu arah dan menyeluruh tanpa mekanisme \textit{Human-in-the-Loop} (HITL), sehingga sistem tidak dapat beradaptasi terhadap perubahan rencana karena kondisi lingkungan atu keinginan operator di tengah misi.
+    
+\end{enumerate}
+
+\section{Tujuan}
+Berdasarkan rumusan masalah yang telah ditetapkan, tujuan dari penelitian ini adalah:
+
+\begin{enumerate}
+    \item Mengintegrasikan \textit{Multimodal Large Language Model} (MLLM) untuk menggerakkan robot menggunakan bahasa alami serta melakukan analisis visual otomatis berbasis dokumen SOP guna meminimalkan beban kognitif operator dan menghindari pemrograman ulang sistem secara manual (\textit{hard-coding}).
+    
+    \item Mengembangkan arsitektur kendali \textit{Human-in-the-Loop} (HITL) dengan metode eksekusi rencana bertahap dan pelaporan berbasis \textit{webhook} untuk memastikan adaptabilitas sistem di tengah misi.
+    
+\end{enumerate}
+
+\section{Batasan Masalah}
+Dalam ruang lingkup tugas akhir ini, pembahasan dibatasi pada hal-hal berikut untuk menjaga fokus penelitian:
+
+\begin{enumerate}
+    \item \textbf{Fokus Pengembangan:} Penelitian berfokus pada arsitektur perangkat lunak \textit{Agentic AI} dan integrasi sistem antara MLLM dan robot. Penelitian tidak mencakup pengembangan algoritma kendali gerak dasar (\textit{low-level control}), kinematika, atau lokomosi robot, melainkan memanfaatkan pustaka navigasi ROS standar.
+    
+    \item \textbf{Model Kecerdasan Buatan:} Model utama yang digunakan sebagai agen orkestrator adalah \textit{Multimodal Large Language Model} (MLLM) komersial berbasis API (Google Gemini), dengan tambahan pengujian menggunakan model lokal Qwen sebagai studi perbandingan. Penelitian ini terbatas pada penerapan teknik \textit{Prompt Engineering}, \textit{Function Calling}, dan \textit{Retrieval-Augmented Generation} (RAG), serta tidak mencakup pelatihan ulang (\textit{fine-tuning}) pada model dasar apa pun. Selain itu, interaksi verbal dan instruksi yang diproses oleh sistem dibatasi pada penggunaan Bahasa Indonesia.
+    
+    \item \textbf{Metode Inspeksi:} Kemampuan inspeksi robot terbatas pada analisis visual menggunakan input kamera yang diproses oleh MLLM. Penilaian kondisi objek (misalnya: karat, posisi saklar, anomali suhu) dilakukan berdasarkan komparasi visual terhadap dokumen \textit{Standard Operating Procedure} (SOP) yang diunggah, bukan menggunakan sensor kontak atau instrumen pengukuran industri lainnya.
+    
+    \item \textbf{Interaksi dan Kendali:} Interaksi manusia-robot menerapkan konsep \textit{Human-in-the-Loop} dengan eksekusi bertahap. Sistem tidak dirancang untuk operasi \textit{real-time} kritis, melainkan mentoleransi latensi jaringan yang wajar untuk proses inferensi MLLM dan komunikasi API.
+    
+    \item \textbf{Perangkat Keras:} Platform robot yang digunakan adalah robot \textit{quadruped} (DeepRobotics) yang dilengkapi kamera. Sistem diasumsikan beroperasi pada jaringan lokal yang stabil untuk menghubungkan modul \textit{Server} (MCP Tools), \textit{Client} (MLLM/FastAPI), dan Robot.
+    
+    \item \textbf{Lingkungan Pengujian:} Validasi sistem dilakukan di lingkungan terkontrol atau simulasi yang merepresentasikan skenario inspeksi fasilitas, dengan fokus pengujian pada akurasi logika navigasi semantik dan ketepatan analisis visual terhadap SOP.
+\end{enumerate}
+
+\section{Manfaat}
+Penelitian ini diharapkan dapat memberikan manfaat signifikan bagi berbagai pihak, antara lain:
+
+\begin{enumerate}
+    \item \textbf{Bagi Pengembangan Ilmu Pengetahuan:} Memberikan kontribusi pada bidang Interaksi Manusia-Robot melalui penerapan arsitektur agen cerdas yang mengintegrasikan navigasi semantik dengan analisis visual berbasis dokumen. Penelitian ini juga menjadi referensi teknis dalam penerapan protokol komunikasi modern (MCP dan Webhook) untuk menjembatani MLLM dengan sistem kendali robotik (ROS).
+    
+    \item \textbf{Bagi Operator dan Pengguna:} Meningkatkan efisiensi dan transparansi operasional melalui mekanisme \textit{human-in-the-loop}. Dengan kemampuan robot untuk melaporkan status aksi secara proaktif dan melakukan verifikasi visual otomatis berdasarkan SOP, operator dapat mengurangi beban kognitif serta meminimalkan risiko kesalahan manusia dalam menafsirkan kondisi lapangan.
+    
+    \item \textbf{Bagi Industri:} Menyediakan solusi inspeksi otomatis yang adaptif dan fleksibel. Berbeda dengan sistem otomasi konvensional yang sangat bergantung pada aturan terprogram yang statis, sistem ini memungkinkan industri untuk mengubah target atau standar inspeksi cukup dengan memperbarui dokumen SOP atau memberikan instruksi verbal. Hal ini mengeliminasi kebutuhan pemrograman ulang pada perangkat lunak robot, sehingga mempercepat adaptasi operasional di lingkungan kerja yang dinamis.
+\end{enumerate}

@@ -1,0 +1,211 @@
+\begin{thebibliography}{10}
+
+\bibitem{GrandView2024}
+{Grand View Research}.
+\newblock Autonomous mobile robot market size, share \& trends analysis report,
+  2025--2030, 2024.
+\newblock Accessed: 2025-12-16.
+
+\bibitem{fan2024review}
+Yanan Fan, Zhongcai Pei, Chen Wang, Meng Li, Zhiyong Tang, and Qinghua Liu.
+\newblock A review of quadruped robots: Structure, control, and autonomous
+  motion.
+\newblock {\em Advanced Intelligent Systems}, 6(6):2300783, 2024.
+
+\bibitem{LookingGlass2024}
+{Looking Glass XR}.
+\newblock Quadruped robots: Transforming inspection and surveying of power
+  plants.
+\newblock Industry report, Industry Insight Report, 2024.
+
+\bibitem{rea2022still}
+Daniel~J Rea and Stela~H Seo.
+\newblock Still not solved: A call for renewed focus on user-centered
+  teleoperation interfaces.
+\newblock {\em Frontiers in Robotics and AI}, 9:704225, 2022.
+
+\bibitem{Darmawan2025}
+I~Wayan~Agus Darmawan.
+\newblock Pengembangan robot quadruped-legged untuk estimasi posisi komponen
+  overheat pada gardu induk berbasis kamera termal.
+\newblock Skripsi/tesis, Institut Teknologi Sepuluh Nopember, 2025.
+
+\bibitem{Mahendra2024}
+Vincentius Gusti Putu Agung~Bagus Mahendra.
+\newblock Interaksi robot manusia berbasis large language model untuk pembuatan
+  movement plan pada robot quadruped-legged.
+\newblock Proposal tugas akhir, Institut Teknologi Sepuluh Nopember, 2025.
+
+\bibitem{maverick2026lite3}
+{Maverick}.
+\newblock Deep robotics jueying lite 3 quadruped robot dog.
+\newblock
+  \url{https://www.maverickdrone.com/products/deep-robotics-jueying-lite-3},
+  2026.
+
+\bibitem{li2025quadruped}
+Qimeng Li, Franco Cicirelli, Andrea Vinci, Antonio Guerrieri, Wen Qi, and
+  Giancarlo Fortino.
+\newblock Quadruped robots: Bridging mechanical design, control, and
+  applications.
+\newblock {\em Robotics}, 14(5):57, 2025.
+
+\bibitem{halder2023construction}
+Srijeet Halder, Kereshmeh Afsari, Erin Chiou, Rafael Patrick, and Kaveh~Akbari
+  Hamed.
+\newblock Construction inspection \& monitoring with quadruped robots in future
+  human-robot teaming: A preliminary study.
+\newblock {\em Journal of Building Engineering}, 65:105814, 2023.
+
+\bibitem{deeprobotics2024motion}
+DeepRobotics.
+\newblock {\em Jueying Lite3 Motion Development Manual (Beta) V2.0.1-0}.
+\newblock DeepRobotics, 2024.
+\newblock Version 2.0.1-0.
+
+\bibitem{deeprobotics2024perception}
+DeepRobotics.
+\newblock {\em Jueying Lite3 Perception Development Manual (Beta)}.
+\newblock DeepRobotics, 2024.
+\newblock Version 241017\_134717.
+
+\bibitem{quigley2009ros}
+Morgan Quigley, Ken Conley, Brian Gerkey, Josh Faust, Tully Foote, Jeremy
+  Leibs, Rob Wheeler, Andrew~Y Ng, et~al.
+\newblock Ros: an open-source robot operating system.
+\newblock In {\em ICRA workshop on open source software}, volume~3, page~5.
+  Kobe, 2009.
+
+\bibitem{mathworks2025ros}
+{MathWorks}.
+\newblock Introduction to robot operating system (ros 1) - matlab \& simulink.
+\newblock
+  \url{https://www.mathworks.com/help/ros/gs/robot-operating-system-ros-basic-concepts_mw_0a63a5a4-2dcd-4e4e-a1ec-312c6ea06716.html},
+  2025.
+
+\bibitem{prague2016navstack}
+in~Prague.
+\newblock Standard ros navigation stack.
+\newblock
+  \url{https://www.researchgate.net/figure/Standard-ROS-Navigation-Stack-7_fig2_312018119},
+  2016.
+
+\bibitem{crick2016rosbridge}
+Christopher Crick, Graylin Jay, Sarah Osentoski, Benjamin Pitzer, and
+  Odest~Chadwicke Jenkins.
+\newblock Rosbridge: Ros for non-ros users.
+\newblock In {\em Robotics research: The 15th international symposium ISRR},
+  pages 493--504. Springer, 2016.
+
+\bibitem{stachniss2016simultaneous}
+Cyrill Stachniss, John~J Leonard, and Sebastian Thrun.
+\newblock Simultaneous localization and mapping.
+\newblock In {\em Springer handbook of robotics}, pages 1153--1176. Springer,
+  2016.
+
+\bibitem{rustam2024graphslam}
+Rustam.
+\newblock Graph-based slam basics.
+\newblock
+  \url{https://medium.com/@fatlip/graph-based-slam-basics-f84501525f24}, 2024.
+
+\bibitem{koide2019portable}
+Kenji Koide, Jun Miura, and Emanuele Menegatti.
+\newblock A portable three-dimensional lidar-based system for long-term and
+  wide-area people behavior measurement.
+\newblock {\em International Journal of Advanced Robotic Systems},
+  16(2):1729881419841532, 2019.
+
+\bibitem{koide2021voxelized}
+Kenji Koide, Masashi Yokozuka, Shuji Oishi, and Atsuhiko Banno.
+\newblock Voxelized gicp for fast and accurate 3d point cloud registration.
+\newblock In {\em 2021 IEEE international conference on robotics and automation
+  (ICRA)}, pages 11054--11059. IEEE, 2021.
+
+\bibitem{dijkstra2022note}
+Edsger~W Dijkstra.
+\newblock A note on two problems in connexion with graphs.
+\newblock In {\em Edsger Wybe Dijkstra: his life, work, and legacy}, pages
+  287--290. 2022.
+
+\bibitem{rosmann2012trajectory}
+Christoph R{\"o}smann, Wendelin Feiten, Thomas W{\"o}sch, Frank Hoffmann, and
+  Torsten Bertram.
+\newblock Trajectory modification considering dynamic constraints of autonomous
+  robots.
+\newblock In {\em ROBOTIK 2012; 7th German Conference on Robotics}, pages 1--6.
+  VDE, 2012.
+
+\bibitem{zhao2025mcp}
+Guodong~Troy Zhao.
+\newblock Model context protocol (mcp): A guide to unlock seamless ai
+  experiences.
+\newblock
+  \url{https://medium.com/design-bootcamp/model-context-protocol-mcp-a-guide-to-unlock-seamless-ai-experiences-30bc27fa47c6},
+  2025.
+
+\bibitem{hou2025model}
+Xinyi Hou, Yanjie Zhao, Shenao Wang, and Haoyu Wang.
+\newblock Model context protocol (mcp): Landscape, security threats, and future
+  research directions.
+\newblock {\em arXiv preprint arXiv:2503.23278}, 2025.
+
+\bibitem{singh2025survey}
+Aditi Singh, Abul Ehtesham, Saket Kumar, and Tala~Talaei Khoei.
+\newblock A survey of the model context protocol (mcp): Standardizing context
+  to enhance large language models (llms).
+\newblock 2025.
+
+\bibitem{chang2024survey}
+Yupeng Chang, Xu~Wang, Jindong Wang, Yuan Wu, Linyi Yang, Kaijie Zhu, Hao Chen,
+  Xiaoyuan Yi, Cunxiang Wang, Yidong Wang, et~al.
+\newblock A survey on evaluation of large language models.
+\newblock {\em ACM transactions on intelligent systems and technology},
+  15(3):1--45, 2024.
+
+\bibitem{xi2025rise}
+Zhiheng Xi, Wenxiang Chen, Xin Guo, Wei He, Yiwen Ding, Boyang Hong, Ming
+  Zhang, Junzhe Wang, Senjie Jin, Enyu Zhou, et~al.
+\newblock The rise and potential of large language model based agents: A
+  survey. arxiv 2023.
+\newblock {\em arXiv preprint arXiv:2309.07864}, 10, 2025.
+
+\bibitem{wang2024survey}
+Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang, Hao Yang, Jingsen Zhang, Zhiyuan
+  Chen, Jiakai Tang, Xu~Chen, Yankai Lin, et~al.
+\newblock A survey on large language model based autonomous agents.
+\newblock {\em Frontiers of Computer Science}, 18(6):186345, 2024.
+
+\bibitem{yin2024survey}
+Shukang Yin, Chaoyou Fu, Sirui Zhao, Ke~Li, Xing Sun, Tong Xu, and Enhong Chen.
+\newblock A survey on multimodal large language models.
+\newblock {\em National Science Review}, 11(12):nwae403, 2024.
+
+\bibitem{mavridis2015review}
+Nikolaos Mavridis.
+\newblock A review of verbal and non-verbal human--robot interactive
+  communication.
+\newblock {\em Robotics and Autonomous Systems}, 63:22--35, 2015.
+
+\bibitem{lewis2020retrieval}
+Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir
+  Karpukhin, Naman Goyal, Heinrich K{\"u}ttler, Mike Lewis, Wen-tau Yih, Tim
+  Rockt{\"a}schel, et~al.
+\newblock Retrieval-augmented generation for knowledge-intensive nlp tasks.
+\newblock {\em Advances in neural information processing systems},
+  33:9459--9474, 2020.
+
+\bibitem{gao2023retrieval}
+Yunfan Gao, Yun Xiong, Xinyu Gao, Kangxiang Jia, Jinliu Pan, Yuxi Bi, Yixin
+  Dai, Jiawei Sun, Haofen Wang, and Haofen Wang.
+\newblock Retrieval-augmented generation for large language models: A survey.
+\newblock {\em arXiv preprint arXiv:2312.10997}, 2(1), 2023.
+
+\bibitem{yao2022react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik~R Narasimhan,
+  and Yuan Cao.
+\newblock React: Synergizing reasoning and acting in language models.
+\newblock In {\em The eleventh international conference on learning
+  representations}, 2022.
+
+\end{thebibliography}

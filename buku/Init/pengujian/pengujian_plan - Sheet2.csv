@@ -1,0 +1,9 @@
+Jenis Tool,Jumlah Objek,gemini-2.5-flash,,,,gemini-3.1-pro-preview,,,,qwen3.5:27b,,,
+,,keberhasilan,rute terpendek,rata-rata latensi,rata-rata total token,keberhasilan,rute terpendek,rata-rata latensi,rata-rata total token,keberhasilan,rute terpendek,rata-rata latensi,rata-rata total token
+mudah,1,2/3,2/2,"17,88","6.393,30",3/3,3/3,"19,44",4571,2/3,2/2,"22,06","8916,3"
+sedang,3,3/3,1/2,"30,04","12.750,33",3/3,3/3,"21,65",6343,3/3,3/3,"27,65","12497,3"
+sulit,6,3/3,3/3,"43,45","15.525,70",3/3,3/3,"26,64",7383,3/3,1/3,"28,33","13291,7"
+mustahil,0,3/3,-,"12,54","5.745,00",3/3,-,"19,65","3962,3",3/3,-,"14,49","6880,3"
+,,,,,,,,,,,,,
+Rata-rata,,,,"25,98","10.103,58",,,"21,85","5.564,83",,,"23,13","10.396,40"
+Persentase,,"91,67%","85,71%",,,"100,00%","100,00%",,,"91,67%","75,00%",,
